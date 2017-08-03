@@ -1,6 +1,6 @@
-# EZShare
+EZShare
 
-## Distributed resources share system
+Distributed resources share system
 
 Server command line argument:  
 -advertisedhostname <arg>       advertised hostname  
@@ -10,7 +10,7 @@ Server command line argument:
 -secret <arg>                   secret  
 -debug                          print debug information  
   
-### Example server output when just started
+Example server output when just started
 java -cp ezshare.jar EZShare.Server  
 20/03/2017 01:17:57.953 - [EZShare.Server.main] - [INFO] - Starting the EZShare Server  
 20/03/2017 01:17:57.979 - [EZShare.ServerControl.] - [INFO] - using secret: 5uv1ii7ec362me7hkch3s7l5c4  
@@ -18,7 +18,7 @@ java -cp ezshare.jar EZShare.Server
 20/03/2017 01:17:57.984 - [EZShare.ServerIO.] - [INFO] - bound to port 3780  
 20/03/2017 01:17:57.986 - [EZShare.ServerExchanger.] - [INFO] - started  
   
-## Client command line argument:
+Client command line argument:
 -channel <arg>         channel  
 -debug                 print debug information  
 -description <arg>     resource description  
@@ -38,7 +38,7 @@ java -cp ezshare.jar EZShare.Server
 -uri <arg>             resource URI  
 -subscribe             subscribe the resources that match the template  
   
-### Example command lines
+Example command lines
 java -cp ezshare.jar EZShare.Client -query -channel myprivatechannel -debug  
 java -cp ezshare.jar EZShare.Client -exchange -servers 115.146.85.165:3780,115.146.85.24:3780 -debug  
 java -cp ezshare.jar EZShare.Client -fetch -channel myprivatechannel -uri file:///home/aaron/EZShare/ezshare.jar -debug  
