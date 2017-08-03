@@ -342,13 +342,6 @@ public class Server {
 		//boolean correctSecret = false;
 		boolean duplication = false;
 		int duplicationNo = -1;
-	//			for(int i = 0; i<resourceList.size(); i++){
-	//				JSONObject temptresource = (JSONObject) resourceList.get(i);
-	//				if (secret.equals(temptresource.get("secret"))){
-	//					correctSecret = true;
-	//					index = 
-	//				}
-	//			}
 		
 		for(int i = 0; i<this.resourceList.size();i++){
 			JSONObject storeddata = (JSONObject) this.resourceList.get(i);
@@ -796,35 +789,6 @@ public class Server {
 			response.put("errorMessage", "missing resourceTemplate");
 			return response;
 		}
-		//TODO  try connect, if exception, return error response
-		
-		//inform other servers
-//		if(!command.containsKey("fromServer")){
-//			for(int i = 0; i < this.serverList.size(); i++){
-//				JSONObject temptServer = (JSONObject) this.serverList.get(i);
-//				String temptip = temptServer.get("hostname").toString();
-//				int temptport =  Integer.parseInt(temptServer.get("port").toString());
-//				if(!(temptip.equals(this.ip)&&temptport==this.port)){
-//					try(Socket socket = new Socket(temptip,temptport)){
-//						DataInputStream input = new DataInputStream(socket.getInputStream());
-//						DataOutputStream output = new DataOutputStream(socket.getOutputStream());
-//						command.put("fromServer", true);
-//						output.writeUTF(command.toJSONString());
-//						output.flush();
-//						socket.close();
-//					}catch (UnknownHostException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					} catch (IOException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					} catch (Exception e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//				}
-//			}
-//		}
 		
 		//add the given server addresses to serverlist
 		for(int i = 0; i < tempServerList.size(); i++){
